@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 
 const AppContext=React.createContext();
 
-const Backend = import.meta.env.VITE_BACKEND_URL;
 
 const AppProvider=({children})=>{
+const Backend = import.meta.env.VITE_BACKEND_URL;
 
 return <AppContext.Provider value={{Backend}}>{children}</AppContext.Provider>
 }
