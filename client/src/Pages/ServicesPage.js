@@ -105,7 +105,7 @@ const {Backend}=useGlobalcontext();
                     >
                       <div className="w-full aspect-[6/3] overflow-hidden">
                         <img
-                          src={`http://localhost:5000${service.image}`}
+                          src={`${Backend}${service.image}`}
                           alt={service.title}
                           loading="lazy"
                           className="w-full h-full object-cover"
