@@ -18,7 +18,7 @@ const PricingCard = ({
   const handleWhatsAppChat = () => {
     // const phoneNumber = ""; // ✅ Change this to your WhatsApp business number (without +)
     const message = `Hi, I'm interested in the ${title} plan. Please provide more details.`;
-    const url = `https://wa.me/91${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/+91${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
 
