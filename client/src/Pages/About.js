@@ -7,7 +7,6 @@
 import React, { useState, lazy, Suspense } from "react";
 import rocketImg from "../assets/about-rocket.png";
 import yoga from "../assets/home-yoga-abstract-img.png";
-import Titleanimate from "../features/Animation/TitleAnimation";
 import { motion } from "framer-motion";
 import LeftToRightAnimation from "../features/Animation/LeftToRightAnimation";
 import { useInView } from "react-intersection-observer";
