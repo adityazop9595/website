@@ -9,12 +9,13 @@ import {
 } from 'react-icons/fa';
 import { io } from 'socket.io-client';
 import WhichPageSection from '../Components/WhichPageSection';
+import { useGlobalcontext } from '../js/context';
 
 const socket = io('http://localhost:5000');
 
 export default function ServicesPage() {
   const [error, setError] = useState(null);
-
+const {Backend}=useGlobalcontext();
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true); // ✅ NEW
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function ServicesPage() {
   try {
     setLoading(true);
     setError(null); // clear previous errors
-    const res = await fetch('http://localhost:5000/api/services');
+    const res = await fetch(`${Backend}/api/services`);
     const data = await res.json();
     if (data.statusCode === 200 && data.status==="ok") {
       setServices(data.services);

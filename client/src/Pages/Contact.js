@@ -12,8 +12,10 @@ import {
   isAbusive,
 } from '../features/Utiles/Validator';
 import WhichPageSection from '../Components/WhichPageSection';
+import { useGlobalcontext } from '../js/context';
 
 export default function Contact() {
+  const {Backend}=useGlobalcontext();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -73,7 +75,7 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/send-mail', {
+      const response = await fetch(`${Backend}/send-mail`, {
         method: 'POST',
         body: JSON.stringify(trimmedFormData),
         headers: { 'Content-Type': 'application/json' },

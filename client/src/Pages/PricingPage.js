@@ -5,7 +5,9 @@ import PricingCard from '../Components/PricingCard';
 
 import { useLocation } from 'react-router-dom';
 import WhichPageSection from '../Components/WhichPageSection';
+import { useGlobalcontext } from '../js/context';
 export default function PricingPage() {
+  const {Backend}=useGlobalcontext();
   const [searchParams] = useSearchParams();
   const serviceName = searchParams.get('service');
   const [pricingData, setPricingData] = useState([]);
@@ -20,7 +22,7 @@ const { title, description } = location.state || {};
       try {
         setLoading(true);
         const res = await fetch(
-          `http://localhost:5000/api/pricing?service=${encodeURIComponent(serviceName)}`
+          `${Backend}/api/pricing?service=${encodeURIComponent(serviceName)}`
         );
         const data = await res.json();
        setPricingData(data);
