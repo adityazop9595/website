@@ -15,8 +15,6 @@ import { Link } from "react-router-dom";
 import WhichPageSection from "../Components/WhichPageSection";
 
 const PlanningTimeline = lazy(() => import("../BitsContent/PlanningTimeline"));
-const PricingSection = lazy(() => import("../BitsContent/PricingSection"));
-const FAQPage = lazy(() => import("../BitsContent/FAQ"));
 
 export default function About() {
   const [activeTab, setActiveTab] = useState("Story");
