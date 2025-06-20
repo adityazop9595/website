@@ -5,7 +5,7 @@ const WhatsappDmButton = () => {
   const phoneNumber = "9404900388";
   const message = "Hi! I'm interested in your services.";
   const encodedMessage = encodeURIComponent(message);
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const whatsappUrl = `https://wa.me/+91${phoneNumber}?text=${encodedMessage}`;
 
   return (
     <a
