@@ -1,0 +1,92 @@
+const services = [
+  {
+    title: 'Social Media Management',
+    description:
+      'Help businesses grow their online presence by managing content, scheduling posts, engaging followers, and analyzing performance on platforms like Instagram, Facebook, and LinkedIn.',
+    image: 'https://cdn.pixabay.com/photo/2015/12/11/09/30/mobile-phone-1087845_1280.jpg',
+  },
+  {
+    title: 'Website Design & Development',
+    description:
+      'Design beautiful, mobile-responsive websites using no-code tools like Wix, WordPress, or Webflow. Perfect for personal brands, small businesses, and landing pages.',
+    image:
+      'https://media.istockphoto.com/photos/developing-programming-and-coding-technologies-with-website-design-in-picture-id1364358321?b=1&k=20&m=1364358321&s=170667a&w=0&h=PpEXtpe9YpTdAORO2BgW1cKe6I2ZrNr9Sx_lcsPX_XI=',
+  },
+  {
+    title: 'SEO & Google My Business Setup',
+    description:
+      'Improve website visibility on Google through keyword optimization, speed tweaks, and setting up Google My Business for local traffic.',
+    image: 'https://cdn.pixabay.com/photo/2014/08/06/09/58/seo-411385_1280.jpg',
+  },
+  {
+    title: 'Web Development',
+    description: 'Custom websites tailored for performance and engagement.',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c',
+  },
+]; make a cp page for servesic adding multer i  express 
+
+
+
+
+
+      <section className="bg-gradient-to-br py-16 px-4 sm:px-6 lg:px-12 relative bg-before-update" >
+      <div className="max-w-5xl mx-auto  rounded-2xl  p-6 sm:p-10 md:p-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
+          Get in Touch
+        </h2>
+        <p className="text-center text-gray-600 text-base md:text-lg mb-10 max-w-2xl mx-auto">
+          Have questions or want to work together? Drop us a message and we'll get back to you soon.
+        </p>
+
+        <form className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              placeholder="Your name"
+              required
+              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              required
+              placeholder="you@example.com"
+              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400"
+            />
+          </div>
+
+          {/* Message */}
+          <div className="sm:col-span-2">
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Message
+            </label>
+            <textarea
+            required
+              rows="5"
+              placeholder="Your message..."
+              className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none"
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <div className="sm:col-span-2 text-center">
+            <button
+              type="submit"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full text-lg transition-all duration-300 shadow-md"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
